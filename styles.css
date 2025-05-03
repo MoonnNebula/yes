@@ -1,0 +1,1355 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.school-info h1 {
+    color: #3498DB;
+}
+
+.school-info p {
+    color: #3498DB;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+}
+
+.contact-info h3 {
+    color: white;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.contact-info h3::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 3px;
+    background: #FF8A1D;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+}
+
+.contact-info a {
+    color: #333 !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    color: #FF8A1D !important;
+}
+.contact-info a:hover {
+    color: #FF8A1D !important;
+}
+/* Navigation Styles */
+nav {
+    background: #3498DB;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0 40px;
+    margin: 0;
+    height: 45px;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #3498DB;
+    color: white;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-content h2 {
+    font-size: 2.2em;    /* reduced from 2.5em */
+    margin-bottom: 10px; /* reduced from 20px */
+}
+
+.welcome-content p {
+    font-size: 1.1em;    /* reduced from 1.2em */
+    margin-bottom: 15px; /* reduced from 30px */
+}
+
+.welcome-button {
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: #FF8A1D;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;  /* changed from 5px to 25px for more rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.welcome-button:hover {
+    background-color: #FF8A1D;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #FF8A1D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Visi Misi Section */
+#visi-misi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;          /* reduced from 3rem for more width */
+    padding: 40px 20px; /* reduced horizontal padding */
+    background: white;
+    max-width: 1400px;  /* increased from 1200px */
+    margin: 0 auto;
+}
+
+.visi-box, .misi-box {
+    padding: 40px 50px;  /* increased padding */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Visi Misi Section */
+.visi-box h2, .misi-box h2 {
+    color: #3498DB;
+    margin-bottom: 5px;   /* reduced from 15px */
+    font-size: 2em;
+}
+
+.visi-box h3, .misi-box h3 {
+    color: #3498DB;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.visi-box p {
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.misi-box ol {
+    color: #666;
+    padding-left: 0;
+    list-style-position: inside;
+    text-align: left;
+}
+
+.misi-box ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Statistics Section */
+#statistics {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#statistics .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#statistics .section-title h3 {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;
+}
+
+#statistics .title-line {
+    width: 560px;
+    height: 3px;
+    background-color: #FF8A1D;
+    margin: 10px auto;
+}
+
+/* Statistics Section */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 200px;
+}
+
+.stat-item i {
+    font-size: 40px;
+    color: #3498DB;
+    margin-bottom: 15px;
+}
+
+.stat-item h4 {
+    color: #3498DB;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h4 {
+    color: #3498DB;
+    font-size: 2rem;
+}
+
+
+/* Footer Styles */
+footer {
+    background: #001f3f;
+    color: white;
+    padding: 2rem 4rem;
+    width: 100%;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 100px; /* Menambahkan gap untuk jarak antar section */
+}
+
+.footer-section {
+    flex: 0 0 auto;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #001F3F;
+    text-align: left;
+    font-size: 19px;
+}
+
+/* Menghapus margin-right: auto dari .footer-section */
+.footer-section h3, 
+.footer-section p,
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.footer-section a:hover {
+    color: #FF8A1D;
+}
+
+.footer-section p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.footer-section i {
+    color: #FF8A1D;
+    margin-right: 8px;
+    align-self: flex-start;
+}
+
+/* Khusus untuk alamat */
+.footer-section a[href*="maps"] {
+    display: inline-flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-section a[href*="maps"] i {
+    margin-top: 3px; /* Sedikit penyesuaian untuk alignment vertikal */
+}
+
+.footer-section a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Khusus untuk alamat yang multiline */
+.footer-section a[href*="maps"] {
+    align-items: flex-start;
+}
+
+.footer-section a[href*="maps"] i {
+    margin-top: 5px;
+}
+
+.footer-section a {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.footer-section i {
+    color: #FF8A1D;
+    min-width: 20px;
+    margin-top: 3px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hapus atau komentar bagian about-section dan contact-section yang lama */
+.footer-section h3, 
+.contact-section h3,
+.social-media h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.footer-section h3::after,
+.contact-section h3::after,
+.social-media h3::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #FF8A1D;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.contact-section a:hover {
+    color: #FF8A1D;
+}
+
+/* Mempertahankan style untuk social-media dan footer-bottom yang sudah ada */
+.social-media {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.social-media h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.social-media h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    margin-top: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+/* Add these styles for the main slider */
+#slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keunggulan slider styles */
+/* Keunggulan Section */
+#keunggulan {
+    padding: 40px 20px;
+    background: white;
+}
+
+#keunggulan h3 {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#keunggulan h3::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.keunggulan-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.keunggulan-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.keunggulan-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.keunggulan-item {
+    min-width: calc(33.333% - 14px);
+    flex: 0 0 auto;
+}
+
+.keunggulan-item .item-content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Menambahkan ini untuk center alignment */
+    padding: 20px;
+}
+
+.keunggulan-item h4 {
+    color: #3498DB;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 60px;  /* Menambahkan height tetap untuk judul */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keunggulan-item .item-content img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.keunggulan-item p {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: justify;  /* Mengubah dari center ke justify */
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: #FF8A1D;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;  /* Changed from 5px to 25px for more rounded corners */
+    margin: 0 20px 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #FF8A1D;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(52, 152, 219, 1);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.keunggulan-item {
+    width: calc(33.33% - 20px);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: justify;
+}
+
+.keunggulan-item h4 {
+    color: #3498DB;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.keunggulan-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.keunggulan-item p {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;  /* Changed from 5px to 25px for more rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+
+/* Sambutan Section */
+#sambutan {
+    padding: 30px 20px 30px;  /* reduced top and bottom padding */
+    background: white;
+}
+
+.sambutan-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sambutan-container h2 {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sambutan-container h2::after {
+    content: '';
+    display: block;
+    width: 410px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+/* Sambutan Section */
+.sambutan-content {
+    display: block;
+    position: relative;
+}
+
+.kepsek-image {
+    float: left;
+    width: 170px;  /* increased from 120px */
+    margin-right: 30px;  /* increased margin for better spacing */
+    margin-bottom: 20px;
+}
+
+.kepsek-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sambutan-text {
+    text-align: justify;
+    color: #666;
+    line-height: 1.8;
+}
+
+.sambutan-text .salam {
+    font-weight: bold;
+    margin-bottom: 20px;  /* reduced from 20px */
+    color: #333;
+}
+
+.sambutan-text .first-paragraph {
+    margin-bottom: 18px;  /* reduced from 20px */
+}
+
+.sambutan-text .second-paragraph {
+    clear: both;
+    padding-top: 3px;  /* reduced from 20px */
+}
+
+/* Profile Page Styles */
+.profile-hero {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.profile-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sejarah-section {
+    padding: 60px 0;
+    background: #3498DB;  /* Menambahkan background biru */
+    color: white;
+}
+
+.sejarah-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.sejarah-section h2::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.sejarah-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+
+.sejarah-top {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.sejarah-image {
+    width: 230px;
+    height: 190px;  /* Mengubah tinggi dari 205px ke 190px */
+}
+
+.sejarah-image img {
+    width: 100%;
+    height: 100%;  /* Mengisi seluruh container */
+    object-fit: cover;  /* Menjaga aspek ratio gambar */
+    border-radius: 8px;
+}
+
+.sejarah-text {
+    flex: 1;
+}
+
+.sejarah-text p, .sejarah-bottom p {
+    margin-bottom: 10px;  /* Mengurangi margin dari 15px ke 10px */
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;    /* Mengurangi line-height dari 1.8 ke 1.6 */
+}
+
+.sejarah-image {
+    width: 230px;
+    height: 190px;  /* Mengubah tinggi dari 205px ke 190px */
+}
+
+.sejarah-bottom {
+    margin-top: 15px;  /* Mengurangi margin dari 20px ke 15px */
+}
+
+.sejarah-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+/* Academic Page Styles */
+.kurikulum-section {
+    padding: 60px 0;
+    background: #3498DB;
+    color: white;
+}
+
+.kurikulum-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.kurikulum-section h2::after {
+    content: '';
+    display: block;
+    width: 180px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.kurikulum-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+
+.kurikulum-text {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.kurikulum-list {
+    list-style: none;
+    padding: 0;
+}
+
+.kurikulum-list li {
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.kurikulum-list li:hover {
+    transform: translateX(10px);
+}
+
+.profil-sekolah-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.blue-heading {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;      /* Changed from 2.5em to 2em to match Sejarah */
+    margin-bottom: 30px;
+    position: relative;   /* Added for the line positioning */
+}
+
+.blue-heading::after {   /* Added orange line */
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.profil-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profil-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.info-section, .operation-hours {
+    flex: 1;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.info-section h3, .operation-hours h3 {
+    color: #FF8A1D;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.info-section h3::after, .operation-hours h3::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.info-section p, .operation-hours p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.info-section, .operation-hours {
+    flex: 1;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.info-section h3, .operation-hours h3 {
+    color: #FF8A1D;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.info-section h3::after, .operation-hours h3::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.info-section a {
+    color: #333 !important;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.info-section i {
+    color: #FF8A1D !important;
+    margin-right: 8px;
+}
+
+.info-section a:hover {
+    color: #FF8A1D !important;
+}
+
+.info-section p, .operation-hours p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+}
+
+.ask-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ask-button:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.form-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;  /* Changed from 5px to 25px for more rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Sambutan Section */
+#sambutan {
+    padding: 30px 20px 30px;  /* reduced top and bottom padding */
+    background: white;
+}
+
+.sambutan-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sambutan-container h2 {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sambutan-container h2::after {
+    content: '';
+    display: block;
+    width: 410px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+/* Sambutan Section */
+.sambutan-content {
+    display: block;
+    position: relative;
+}
+
+.kepsek-image {
+    float: left;
+    width: 170px;  /* increased from 120px */
+    margin-right: 30px;  /* increased margin for better spacing */
+    margin-bottom: 20px;
+}
+
+.kepsek-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sambutan-text {
+    text-align: justify;
+    color: #666;
+    line-height: 1.8;
+}
+
+.sambutan-text .salam {
+    font-weight: bold;
+    margin-bottom: 20px;  /* reduced from 20px */
+    color: #333;
+}
+
+.sambutan-text .first-paragraph {
+    margin-bottom: 18px;  /* reduced from 20px */
+}
+
+.sambutan-text .second-paragraph {
+    clear: both;
+    padding-top: 3px;  /* reduced from 20px */
+}
+
+/* Profile Page Styles */
+.profile-hero {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.profile-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sejarah-section {
+    padding: 60px 0;
+    background: #3498DB;  /* Menambahkan background biru */
+    color: white;
+}
+
+.sejarah-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.sejarah-section h2::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.sejarah-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+
+.sejarah-top {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.sejarah-image {
+    width: 230px;
+    height: 190px;  /* Mengubah tinggi dari 205px ke 190px */
+}
+
+.sejarah-image img {
+    width: 100%;
+    height: 100%;  /* Mengisi seluruh container */
+    object-fit: cover;  /* Menjaga aspek ratio gambar */
+    border-radius: 8px;
+}
+
+.sejarah-text {
+    flex: 1;
+}
+
+.sejarah-text p, .sejarah-bottom p {
+    margin-bottom: 10px;  /* Mengurangi margin dari 15px ke 10px */
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;    /* Mengurangi line-height dari 1.8 ke 1.6 */
+}
+
+.sejarah-image {
+    width: 230px;
+    height: 190px;  /* Mengubah tinggi dari 205px ke 190px */
+}
+
+.sejarah-bottom {
+    margin-top: 15px;  /* Mengurangi margin dari 20px ke 15px */
+}
+
+.sejarah-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+/* Academic Page Styles */
+.kurikulum-section {
+    padding: 60px 0;
+    background: #3498DB;
+    color: white;
+}
+
+.kurikulum-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.kurikulum-section h2::after {
+    content: '';
+    display: block;
+    width: 180px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.kurikulum-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+
+.kurikulum-text {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.kurikulum-list {
+    list-style: none;
+    padding: 0;
+}
+
+.kurikulum-list li {
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.kurikulum-list li:hover {
+    transform: translateX(10px);
+}
+
+.profil-sekolah-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.blue-heading {
+    color: #3498DB;
+    text-align: center;
+    font-size: 2em;      /* Changed from 2.5em to 2em to match Sejarah */
+    margin-bottom: 30px;
+    position: relative;   /* Added for the line positioning */
+}
+
+.blue-heading::after {   /* Added orange line */
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: #FF8A1D;
+    margin: 10px auto;
+}
+
+.profil-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profil-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+

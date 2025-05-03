@@ -1,0 +1,419 @@
+.prestasi-container {
+    padding: 0;  /* Menghapus padding container */
+    max-width: 100%;  /* Full width */
+    margin: 0;
+}
+
+.prestasi-header {
+    text-align: center;
+    background: linear-gradient(to right, #002147, #003366);
+    color: white;
+    padding: 2.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 0;
+    display: flex;           /* Tambahkan ini */
+    flex-direction: column;  /* Tambahkan ini */
+    align-items: center;     /* Tambahkan ini */
+    justify-content: center; /* Tambahkan ini */
+}
+
+.prestasi-header h1 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    width: 100%;            /* Tambahkan ini */
+    text-align: center;     /* Tambahkan ini */
+}
+
+/* Lingkaran pertama (kiri atas) */
+.prestasi-header::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: url('images/circle-pattern1.png');
+    background-size: cover;
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    opacity: 0.2;
+}
+
+/* Lingkaran kedua (kanan bawah) */
+.prestasi-header::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: url('images/circle-pattern2.png');
+    background-size: cover;
+    border-radius: 50%;
+    bottom: -150px;
+    right: -150px;
+    opacity: 0.2;
+}
+
+.prestasi-header::before {
+    top: -100px;
+    left: -100px;
+}
+
+.prestasi-header::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Pastikan container juga memiliki text-align center */
+.prestasi-container {
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.prestasi-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.semester-toggle {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.semester-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f0f0f0;
+}
+
+.semester-btn.active {
+    background: #003366;
+    color: white;
+}
+
+.prestasi-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1rem 0;
+    table-layout: fixed;
+    border-bottom: 2px solid #003366;  /* Tambahkan ini */
+}
+
+/* Pastikan baris terakhir juga memiliki border */
+.prestasi-table tbody tr:last-child td {
+    border-bottom: none;  /* Hapus border bawah default */
+}
+
+.prestasi-table th,
+.prestasi-table td {
+    padding: 12px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prestasi-table th:last-child,
+.prestasi-table td:last-child {
+    border-right: none;
+}
+
+.prestasi-table thead tr {
+    border-bottom: 2px solid #ddd;  /* Garis bawah header lebih tebal */
+}
+
+.prestasi-table tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+/* Hapus duplikasi border */
+.prestasi-table thead,
+.prestasi-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.prestasi-table tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 250px;
+    border-top: 1px solid #ddd;  /* Tambahkan ini */
+}
+
+/* Tambahkan wrapper untuk tabel */
+.table-wrapper {
+    max-height: 300px;
+    overflow: hidden;  /* Ubah dari overflow-y: auto */
+    position: relative;
+}
+
+.prestasi-table thead {
+    position: static;  /* Ubah dari sticky */
+    background-color: #003366;
+}
+
+.prestasi-table tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 250px;  /* Sesuaikan tinggi scroll area */
+}
+
+.prestasi-table thead,
+.prestasi-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Style untuk scrollbar di tbody */
+.prestasi-table tbody::-webkit-scrollbar {
+    width: 8px;
+}
+
+.prestasi-table tbody::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.prestasi-table tbody::-webkit-scrollbar-thumb {
+    background: #003366;
+    border-radius: 4px;
+}
+
+.prestasi-table th,
+.prestasi-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    overflow: hidden;  /* Tambahkan ini */
+    text-overflow: ellipsis;  /* Tambahkan ini */
+}
+
+/* Atur lebar spesifik untuk setiap kolom */
+.prestasi-table th:nth-child(1),
+.prestasi-table td:nth-child(1) {
+    width: 5%;  /* No */
+}
+
+.prestasi-table th:nth-child(2),
+.prestasi-table td:nth-child(2) {
+    width: 15%;  /* Nama */
+}
+
+.prestasi-table th:nth-child(3),
+.prestasi-table td:nth-child(3) {
+    width: 8%;  /* Kelas */
+}
+
+.prestasi-table th:nth-child(4),
+.prestasi-table td:nth-child(4) {
+    width: 15%;  /* Nama Lomba */
+}
+
+.prestasi-table th:nth-child(5),
+.prestasi-table td:nth-child(5) {
+    width: 15%;  /* Juara */
+}
+
+.prestasi-table th:nth-child(6),
+.prestasi-table td:nth-child(6) {
+    width: 12%;  /* Tingkat */
+}
+
+.prestasi-table th:nth-child(7),
+.prestasi-table td:nth-child(7) {
+    width: 15%;  /* Penyelenggara */
+}
+
+.prestasi-table th:nth-child(8),
+.prestasi-table td:nth-child(8) {
+    width: 15%;  /* Tempat dan Waktu */
+}
+.prestasi-table th {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+}
+
+.prestasi-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.nasional {
+    background-color: #28a745;
+}
+
+.provinsi {
+    background-color: #ffc107;
+}
+
+.kabupaten {
+    background-color: #dc3545;
+}
+
+.kisah-inspiratif {
+    margin-top: 5rem;  /* Ubah dari 3rem ke 5rem untuk jarak yang lebih besar */
+    padding: 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.kisah-inspiratif h2 {
+    background: linear-gradient(to right, #002147, #003366);
+    color: white;
+    margin: 0;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+.kisah-inspiratif p {
+    text-align: justify;  /* Ubah dari left ke justify */
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    line-height: 1.8;    /* Tambahkan line-height untuk keterbacaan yang lebih baik */
+}
+
+/* Khusus untuk tahun ajaran tetap center */
+.kisah-inspiratif .tahun-ajaran {
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.kisah-inspiratif p:first-of-type {
+    margin-top: 1.5rem;  /* Tambahkan jarak di atas paragraf pertama */
+}
+
+/* Tambahkan padding untuk testimonial section */
+.testimonial-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 2rem 2rem;  /* Tambahkan padding bawah */
+}
+
+.testimonial-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1 1 calc(50% - 10px);
+    min-width: 300px;
+}
+
+/* Tambahkan media queries untuk responsif */
+@media screen and (max-width: 768px) {
+    .testimonial-card {
+        flex: 1 1 100%;  /* Satu kolom penuh di mobile */
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-content {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .testimonial-name {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-class {
+        font-size: 0.75rem;
+    }
+}
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.testimonial-info {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #003366;
+}
+
+.testimonial-class {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Hapus style untuk bullet point karena tidak diperlukan lagi */
+.testimonial-class::before {
+    content: none;
+    position: relative;
+    padding-left: 8px;
+}
+
+.testimonial-class::before {
+    content: '•';
+    position: absolute;
+    left: -2px;
+}
+
+.testimonial-content {
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;  /* Tambahkan ini */
+}
+
+/* Tambahkan wrapper untuk konten setelah header */
+.prestasi-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}

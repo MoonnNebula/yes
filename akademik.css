@@ -1,0 +1,992 @@
+/* Layout untuk section akademik */
+.kurikulum-section,
+.p5-section,
+.sistem-section,
+.penilaian-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Style untuk heading */
+.kurikulum-section h2,
+.p5-section h2,
+.sistem-section h2,
+.penilaian-section h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Style untuk garis bawah judul */
+.kurikulum-section h2::after,
+.p5-section h2::after,
+.sistem-section h2::after,
+.penilaian-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff6b00;
+    border-radius: 15px;
+}
+
+
+/* Style untuk konten */
+.kurikulum-content,
+.p5-content,
+.sistem-content,
+.penilaian-content {
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef
+
+}
+
+/* Style untuk paragraf */
+section p {
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* Style untuk list */
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+section ul li {
+    color: #495057;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    margin-left: 25px;
+    position: relative;
+    transition: padding-left 0.3s ease;
+}
+
+section ul li:hover {
+    padding-left: 10px;
+    color: #3498DB;
+}
+
+/* Bullet points kustom */
+section ul li::before {
+    content: '•';
+    position: absolute;
+    left: -20px;
+    color: #3498DB;
+    font-weight: bold;
+}
+
+/* Style untuk page header */
+.page-header {
+    background-color: #3498DB;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header .section-heading {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+}
+
+.page-header .section-heading h3 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h3 {
+    color: #333;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.akademik-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('images/akademik-banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    transition: backdrop-filter 0.3s ease; /* Tambahkan transisi */
+}
+
+.blur-on-scroll {
+    backdrop-filter: blur(5px);
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .akademik-banner {
+        height: 300px;
+    }
+    
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+    }
+}
+
+
+/* Hapus style kurikulum yang lama dan ganti dengan yang baru */
+.fitur-kurikulum {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;  /* Tambahkan background putih */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fitur-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 20px;
+    background: #f8f9fa;  /* Tambahkan background yang sama dengan container lain */
+    border-radius: 15px;
+}
+
+.fitur-kurikulum h2 {
+    text-align: center;
+    color: #0A2647;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.fitur-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 20px;
+}
+
+.fitur-item {
+    flex: 1;
+    min-height: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;          /* Tambahkan display flex */
+    flex-direction: column; /* Atur arah flex ke kolom */
+    justify-content: center; /* Tengahkan konten secara vertikal */
+}
+
+.fitur-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0A2647, #2E8BC0);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+.fitur-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.fitur-icon {
+    width: 80px;
+    height: 80px;
+    background: #E8F4FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.4s ease;
+}
+
+.fitur-icon i {
+    font-size: 35px;
+    color: #0A2647;
+    transition: all 0.4s ease;
+}
+
+.fitur-item:hover .fitur-icon {
+    background: white;
+    transform: rotateY(360deg);
+}
+
+.fitur-item:hover .fitur-icon i {
+    color: #2E8BC0;
+}
+
+.fitur-item h3 {
+    color: #0A2647;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+}
+
+.fitur-item p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    transition: all 0.4s ease;
+}
+
+.fitur-item:hover h3,
+.fitur-item:hover p {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .fitur-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tambahkan di bawah style fitur-kurikulum */
+.p5-projects {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.p5-content {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.p5-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.p5-projects h2 {
+    text-align: center;
+    color: #0A2647;
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.p5-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.p5-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ubah menjadi 4 kolom tetap */
+    gap: 20px;
+    padding: 20px;
+}
+
+.p5-card {
+    background: white;
+    padding: 25px; /* Perkecil padding */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.p5-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #2E8BC0;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: #E8F4FF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon i {
+    font-size: 30px;
+    color: #0A2647;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.card-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0A2647, #2E8BC0);
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.p5-card:hover .card-icon::before {
+    transform: translateY(0);
+}
+
+.p5-card:hover .card-icon i {
+    color: white;
+    transform: rotateY(360deg);
+}
+
+.p5-card h3 {
+    color: #0A2647;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.p5-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.p5-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0A2647, #2E8BC0);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.p5-card:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .p5-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sistem-pembelajaran {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.sistem-card {
+    background: #f8f9fa;    /* Samakan dengan card P5 */
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sistem-pembelajaran h2 {
+    text-align: center;
+    color: #0A2647;
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sistem-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sistem-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 20px;
+}
+
+.sistem-card {
+    flex: 1;
+    max-width: 350px;
+    min-width: 250px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid transparent;
+}
+
+.sistem-card:hover {
+    transform: translateY(-5px);
+    border-left-color: #2E8BC0;
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.sistem-card .card-icon {
+    width: 60px;
+    height: 60px;
+    background: #E8F4FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.sistem-card .card-icon i {
+    font-size: 28px;
+    color: #0A2647;
+    transition: all 0.4s ease;
+}
+
+.sistem-card:hover .card-icon {
+    background: #0A2647;
+    transform: rotate(10deg);
+}
+
+.sistem-card:hover .card-icon i {
+    color: white;
+    transform: scale(1.2);
+}
+
+.sistem-card h3 {
+    color: #0A2647;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.sistem-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.sistem-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0A2647, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.sistem-card:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .sistem-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Penilaian Section Style */
+.penilaian-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.penilaian-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.penilaian-container {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.penilaian-section h2 {
+    text-align: center;
+    color: #0A2647;
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.penilaian-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: nowrap;
+}
+
+.penilaian-item {
+    flex: 1;
+    max-width: 350px;
+    min-width: 250px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.penilaian-item h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: #333;
+    text-align: center;
+}
+
+.penilaian-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    z-index: 1;
+}
+
+.penilaian-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0A2647, #2E8BC0);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.penilaian-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #2E8BC0;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.penilaian-item:hover::before {
+    opacity: 1;
+}
+
+.penilaian-item:hover h3,
+.penilaian-item:hover p {
+    color: white;
+}
+
+.penilaian-item .item-icon {
+    width: 70px;
+    height: 70px;
+    background: #E8F4FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.penilaian-item:hover .item-icon {
+    background: white;
+    transform: rotateY(360deg);
+}
+
+.penilaian-item:hover .item-icon i {
+    color: #2E8BC0;
+}
+
+/* Program Pembinaan Style */
+/* Tambahkan pembinaan-section ke dalam selector yang sudah ada di atas */
+.kurikulum-section,
+.p5-section,
+.sistem-section,
+.penilaian-section,
+.pembinaan-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+/* Tambahkan pembinaan-section h2 ke dalam selector yang sudah ada */
+.kurikulum-section h2,
+.p5-section h2,
+.sistem-section h2,
+.penilaian-section h2,
+.pembinaan-section h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Tambahkan pembinaan-section h2::after ke dalam selector yang sudah ada */
+.kurikulum-section h2::after,
+.p5-section h2::after,
+.sistem-section h2::after,
+.penilaian-section h2::after,
+.pembinaan-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff6b00;
+    border-radius: 15px;
+}
+
+
+.pembinaan-container {
+    background: #f8f9fa;    /* Menggunakan warna yang sama dengan penilaian-container */
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pembinaan-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #f8f9fa;    /* Menggunakan warna yang sama */
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.pembinaan-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.pembinaan-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.pembinaan-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.pembinaan-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.pembinaan-item .item-icon {
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    color: #6C63FF;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pembinaan-item:hover .item-icon {
+    transform: rotateZ(10deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+@keyframes patternMove {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .pembinaan-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hapus semua style pembinaan-item yang ada sebelumnya dan gunakan ini */
+.pembinaan-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.pembinaan-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    z-index: 1;
+    text-align: center;
+}
+
+.pembinaan-item p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.pembinaan-item:hover {
+    transform: translateY(-10px);
+    border-color: #2E8BC0;
+    background: linear-gradient(135deg, #f8f9fa, #fff);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.pembinaan-item .item-icon {
+    width: 70px;
+    height: 70px;
+    background: #E8F4FF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.pembinaan-item:hover .item-icon {
+    background: #0A2647;
+    transform: rotate(10deg) scale(1.1);
+}
+
+.pembinaan-item:hover .item-icon i {
+    color: white;
+}
+
+.pembinaan-item h3 {
+    color: #0A2647;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.pembinaan-item p {
+    color: #666;
+    font-size: 18px;  /* Samakan dengan ukuran teks penilaian-intro */
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    text-align: center;  /* Tambahkan perataan tengah */
+}
+
+.pembinaan-item:hover h3 {
+    color: #0A2647;
+    transform: translateY(-2px);
+}
+
+.pembinaan-item:hover p {
+    color: #2E8BC0;
+}
+
+.pembinaan-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0A2647, #2E8BC0);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.pembinaan-item:hover::after {
+    transform: scaleX(1);
+}
+.fitur-item h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.fitur-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fitur-item p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}

@@ -1,0 +1,155 @@
+/* General Layout */
+.beranda {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #ffffff;
+}
+
+/* Header Section */
+.frame-24 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.images-removebg {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Navigation Menu */
+.frame-22 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.text-wrapper-25 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.text-wrapper-25:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.overlap {
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,123,255,0.1), rgba(0,123,255,0.1));
+}
+
+.text-wrapper {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Content Sections */
+.frame-16 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.frame-17, .frame-18, .frame-19 {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.frame-17:hover, .frame-18:hover, .frame-19:hover {
+    transform: translateY(-5px);
+}
+
+/* Statistics Section */
+.group-4 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 60px 0;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.group-4 > div {
+    padding: 20px;
+    min-width: 200px;
+}
+
+/* Footer Section */
+.overlap-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+    background: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .frame-16 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .frame-16 {
+        grid-template-columns: 1fr;
+    }
+    
+    .group-4 {
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .overlap-6 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .text-wrapper {
+        font-size: 2em;
+    }
+
+    .frame-22 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .beranda {
+        padding: 0 15px;
+    }
+
+    .text-wrapper {
+        font-size: 1.5em;
+    }
+
+    .p {
+        font-size: 1em;
+    }
+}

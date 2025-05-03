@@ -1,0 +1,123 @@
+/* Contact Section Specific Styles */
+.contact-section {
+    background-color: #001f3f;
+    padding: 40px 20px;
+}
+
+.contact-section h2 {
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #FF8A1D;
+}
+
+.contact-section p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-section i {
+    color: #FF8A1D;
+    font-size: 16px;
+}
+
+.contact-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #FF8A1D;
+}
+
+/* Social media icons */
+.media-sosial {
+    margin-top: 20px;
+}
+
+.media-sosial a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.media-sosial a:hover {
+    color: #FF8A1D;
+}
+
+.media-sosial i {
+    font-size: 24px;
+}
+
+
+/* Info Section and Operation Hours Styles */
+.info-section p, 
+.operation-hours p {
+    font-size: 24px;  /* Memperbesar ukuran font */
+    line-height: 2;
+    margin: 20px 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.info-section h3, 
+.operation-hours h3 {
+    font-size: 32px;  /* Memperbesar heading */
+    margin-bottom: 30px;
+    color: #002147;
+    font-weight: 600;
+}
+
+.info-section i,
+.social-links i {
+    font-size: 28px;  /* Memperbesar icon */
+    margin-right: 15px;
+    color: #FF8A1D;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    font-size: 32px;  /* Memperbesar icon social media */
+    margin-right: 25px;
+    color: #FF8A1D;
+}
+
+.info-section a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 24px;  /* Menyesuaikan dengan ukuran teks */
+}
+
+.info-section a:hover {
+    color: #2196F3;
+}

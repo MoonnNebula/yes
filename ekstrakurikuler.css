@@ -1,0 +1,253 @@
+/* Banner Ekstrakurikuler */
+.ekskul-banner {
+    width: 100%;
+    height: 500px; /* Ubah ke tinggi yang proporsional */
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.ekskul-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    /* Hapus vertical-align: top karena tidak diperlukan dengan display: block */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    text-align: center;
+    line-height: 1.6; /* Kembalikan line height untuk teks */
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.banner-content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+    }
+}
+
+
+/* Ekstrakurikuler Grid */
+.ekskul-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ubah dari 2 menjadi 3 kolom */
+    gap: 25px; /* Sesuaikan gap agar lebih pas */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Sesuaikan ukuran card */
+.ekskul-card img {
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi gambar */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .ekskul-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .ekskul-grid {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}
+/* Hover Effect */
+.ekskul-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ekskul-info {
+    padding: 20px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.ekskul-info h3 {
+    color: #0A2647;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ekskul-info p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.ekskul-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.ekskul-info {
+    padding: 20px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    text-align: center; /* Menengahkan semua teks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ekskul-info h3 {
+    color: #0A2647;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.ekskul-info p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 90%; /* Membatasi lebar teks */
+    margin: 0 auto; /* Menengahkan blok teks */
+}
+
+.ekskul-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.ekskul-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.05) contrast(1.05);
+}
+
+.ekskul-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.ekskul-card:hover .ekskul-overlay {
+    opacity: 1;
+}
+
+.ekskul-card:hover .ekskul-info {
+    transform: translateY(-3px);
+    background: #fff;
+}
+
+.ekskul-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;  /* Tambahkan ini */
+    display: flex;  /* Tambahkan ini */
+    flex-direction: column;  /* Tambahkan ini */
+}
+
+.ekskul-content {
+    flex-grow: 1;  /* Tambahkan ini */
+    display: flex;  /* Tambahkan ini */
+    flex-direction: column;  /* Tambahkan ini */
+}
+
+.ekskul-item img {
+    width: 100%;
+    height: 200px;  /* Tetapkan tinggi yang konsisten */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ekskul-item h3 {
+    color: #0A2647;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+}
+
+.ekskul-item p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    transition: all 0.4s ease;
+    flex-grow: 1;  /* Tambahkan ini */
+    margin-bottom: 20px;  /* Tambahkan ini */
+}
